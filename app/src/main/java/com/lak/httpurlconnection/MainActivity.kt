@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
+import com.lak.httpurlconnection.model.local.BooksRoomDatabase
+import com.lak.httpurlconnection.model.local.entities.FavouriteBook
 import com.lak.httpurlconnection.model.network.Network
 
 private const val TAG = "Main Activity"
@@ -24,7 +27,31 @@ class MainActivity : AppCompatActivity() {
 //            Network.getBooks()
 //        }).start()
 
+        insertBook()
 
+        readFromBook()
+
+    }
+
+    private fun readFromBook() {
+        val dao = BooksRoomDatabase.newInstance(this).getDao()
+
+        dao.getFavouriteBook().forEach {book ->
+            Toast.makeText(this@MainActivity, "$book", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun insertBook() {
+        val dao = BooksRoomDatabase.newInstance(this).getDao()
+
+        dao.insertFavouriteBook(
+            FavouriteBook(
+                image = "this is gonna be image URL",
+                title = "this is book title",
+                description = "this is book description",
+                author = "author of the book"
+            )
+        )
     }
 
 
