@@ -8,7 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.lak.httpurlconnection.model.local.BooksRoomDatabase
 import com.lak.httpurlconnection.model.local.entities.FavouriteBook
-import com.lak.httpurlconnection.model.network.Network
+import com.lak.httpurlconnection.model.remote.Network
+import com.lak.httpurlconnection.view.BookSearchFragment
 
 private const val TAG = "Main Activity"
 class MainActivity : AppCompatActivity() {
@@ -20,16 +21,20 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG,"onCreate")
         setContentView(R.layout.activity_main)
 
-        tvResult = findViewById(R.id.result)
+   //     tvResult = findViewById(R.id.result)
 
 //        Thread(Runnable {
 //            tvResult.text =
 //            Network.getBooks()
 //        }).start()
 
-        insertBook()
+ //       insertBook()
 
-        readFromBook()
+  //      readFromBook()
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.search_fragment_container, BookSearchFragment())
+            .commit()
 
     }
 
