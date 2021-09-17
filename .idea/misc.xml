@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/book_detail_fragment_layout.xml" value="0.23731884057971014" />
         <entry key="app/src/main/res/layout/book_search_fragment.xml" value="0.23731884057971014" />
         <entry key="app/src/main/res/layout/display_books_search.xml" value="0.23731884057971014" />
+        <entry key="app/src/main/res/layout/single_book_response.xml" value="0.2" />
       </map>
     </option>
   </component>

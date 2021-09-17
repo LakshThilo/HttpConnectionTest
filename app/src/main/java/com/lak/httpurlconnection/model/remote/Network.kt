@@ -1,11 +1,10 @@
-package com.lak.httpurlconnection.model.network
+package com.lak.httpurlconnection.model.remote
 
 import android.net.Uri
 import android.util.Log
 import com.lak.httpurlconnection.model.BookResponse
 import com.lak.httpurlconnection.model.ItemDescription
 import com.lak.httpurlconnection.model.VolumeInfoDescription
-import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStream
