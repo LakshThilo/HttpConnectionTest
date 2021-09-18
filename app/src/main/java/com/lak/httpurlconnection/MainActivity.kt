@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
     }
-
+/*
     private fun readFromBook() {
         val dao = BooksRoomDatabase.newInstance(this).getDao()
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 author = "author of the book"
             )
         )
-    }
+    }*/
 
 
     override fun onStop() {
